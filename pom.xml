@@ -27,9 +27,6 @@
 							<mainClass>net.tux.ControlMediaPlayer</mainClass>
 						</manifest>
 					</archive>
-					<includes>
-            			<include>${basedir}/**</include>
-          			</includes>
 				</configuration>
 			</plugin>
 			<plugin>
