@@ -19,22 +19,33 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jar-plugin</artifactId>
+				<version>2.3.1</version>
 				<configuration>
 					<archive>
 						<manifest>
-							<mainClass>mypackage.ControlSpotify</mainClass>
-							<packageName>mypackage</packageName>
+							<addClasspath>true</addClasspath>
+							<mainClass>net.tux.ControlMediaPlayer</mainClass>
 						</manifest>
-						<manifestEntries>
-							<mode>development</mode>
-							<url>${pom.url}</url>
-						</manifestEntries>
 					</archive>
+					<includes>
+            			<include>${basedir}/**</include>
+          			</includes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-eclipse-plugin</artifactId>
+				<version>2.8</version>
+				<configuration>
+					<downloadSources>true</downloadSources>
+					<downloadJavadocs>true</downloadJavadocs>
+					<workspace>${basedir}</workspace>
+					<workspaceCodeStylesURL>http://svn.apache.org/repos/asf/maven/plugins/trunk/maven-eclipse-plugin/src/optional/eclipse-config/maven-styles.xml</workspaceCodeStylesURL>
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>

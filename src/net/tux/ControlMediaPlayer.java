@@ -53,9 +53,6 @@ public class ControlMediaPlayer {
 					}
 				}
 			}
-
-//			propertyName = "CanGoNext";
-//			query(propertyName);
 			
 			String arg = args[0];
 			if (arg.equals("playpause")&&!running) 
